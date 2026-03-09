@@ -9,8 +9,6 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:sans-serif;background:#eef4e8;min-height:100vh;padding-bottom:72px;font-size:15px}
-
-/* LOGIN */
 .login-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:24px;background:linear-gradient(160deg,#1e4d0a,#3a7d1a,#5aad2a)}
 .login-logo{font-size:72px;margin-bottom:16px;animation:bounce 2s infinite}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -19,35 +17,26 @@ body{font-family:sans-serif;background:#eef4e8;min-height:100vh;padding-bottom:7
 .login-card{background:#fff;border-radius:20px;padding:28px 24px;width:100%;max-width:360px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
 .login-card h2{font-size:18px;font-weight:900;color:#1e4d0a;margin-bottom:6px}
 .login-card p{font-size:13px;color:#888;margin-bottom:24px}
-.btn-google{width:100%;background:#fff;border:2px solid #e0e0e0;border-radius:12px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s;color:#333}
-.btn-google:hover{border-color:#5aad2a;background:#f6faf2}
-.btn-google:active{transform:scale(.98)}
+.btn-google{width:100%;background:#fff;border:2px solid #e0e0e0;border-radius:12px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;color:#333}
 .btn-google img{width:22px;height:22px}
 .login-note{font-size:11px;color:#bbb;text-align:center;margin-top:16px}
-
-/* HEADER */
 .hdr{background:linear-gradient(135deg,#1e4d0a,#3a7d1a);color:#fff;padding:14px 16px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between}
 .hdr-left h1{font-size:18px;font-weight:900}
-.hdr-left p{font-size:11px;opacity:.75;margin-top:1px}
+.admin-badge{display:inline-block;background:#f9ca24;color:#1a3d00;font-size:10px;font-weight:900;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle}
 .user-info{display:flex;align-items:center;gap:8px}
 .user-avatar{width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.4);object-fit:cover}
 .user-name{font-size:11px;font-weight:700;opacity:.9;max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .btn-logout{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;padding:4px 8px;font-size:11px;font-weight:700;cursor:pointer}
-
-/* TABS */
+.sync-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.15);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;margin-top:4px}
+.sync-dot{width:7px;height:7px;border-radius:50%;background:#5aad2a;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .tabs{display:flex;background:#1e4d0a}
-.tab{flex:1;padding:11px 4px;background:none;border:none;color:rgba(255,255,255,.5);font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent}
+.tab{flex:1;padding:11px 4px;background:none;border:none;color:rgba(255,255,255,.5);font-size:11px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
 .tab.on{color:#f9ca24;border-bottom-color:#f9ca24}
-
-/* PAGES */
 .pg{display:none;padding:14px}
 .pg.on{display:block}
-
-/* CARD */
 .card{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 10px rgba(0,80,0,.1)}
 .ctitle{font-size:11px;font-weight:900;color:#1e6b0a;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
-
-/* FORM */
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
 .fg{margin-bottom:10px}
 .fg label{font-size:11px;font-weight:800;color:#2a6010;text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:5px}
@@ -59,22 +48,16 @@ body{font-family:sans-serif;background:#eef4e8;min-height:100vh;padding-bottom:7
 .trow input{flex:1}
 .nbtn{background:#5aad2a;color:#fff;border:none;border-radius:8px;padding:11px 10px;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap;flex-shrink:0}
 .btn-save{width:100%;background:linear-gradient(135deg,#5aad2a,#2a7010);color:#fff;border:none;border-radius:12px;padding:14px;font-size:16px;font-weight:900;cursor:pointer;margin-top:4px;box-shadow:0 4px 14px rgba(90,173,42,.35)}
-.btn-save:active{opacity:.85}
 .btn-del{background:#fdecea;color:#c0392b;border:none;border-radius:8px;padding:6px 10px;font-size:12px;font-weight:700;cursor:pointer}
 .btn-export{width:100%;background:linear-gradient(135deg,#f9ca24,#e6a817);color:#1a3d00;border:none;border-radius:11px;padding:13px;font-size:14px;font-weight:900;cursor:pointer;margin-bottom:8px}
-
-/* SUMMARY */
 .sumgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.sumgrid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
 .sumcard{background:#fff;border-radius:14px;padding:14px;box-shadow:0 2px 10px rgba(0,80,0,.1);text-align:center}
-.sumval{font-size:30px;font-weight:900;line-height:1}
+.sumval{font-size:26px;font-weight:900;line-height:1}
 .sumlbl{font-size:10px;color:#999;font-weight:800;text-transform:uppercase;margin-top:4px}
-
-/* FILTER */
-.chips{display:flex;gap:8px;margin-bottom:12px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.chips{display:flex;gap:8px;margin-bottom:12px;overflow-x:auto;padding-bottom:4px}
 .chip{flex-shrink:0;padding:6px 14px;border-radius:20px;border:2px solid #ccc;background:#fff;font-size:12px;font-weight:700;cursor:pointer;color:#777}
 .chip.on{background:#1e4d0a;border-color:#1e4d0a;color:#fff}
-
-/* RECORD */
 .rec{background:#fff;border-radius:14px;padding:13px 14px;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,80,0,.08);border-left:4px solid #5aad2a;position:relative}
 .rec-date{font-size:15px;font-weight:900;color:#1e4d0a}
 .rec-day{font-size:12px;color:#aaa;font-weight:600}
@@ -86,52 +69,41 @@ body{font-family:sans-serif;background:#eef4e8;min-height:100vh;padding-bottom:7
 .dot{width:8px;height:8px;border-radius:50%}
 .dot.in{background:#5aad2a}.dot.out{background:#e55039}
 .rec-ket{font-size:12px;color:#777;margin-top:6px;font-style:italic}
-.rec-del{position:absolute;top:10px;right:10px;background:#fdecea;color:#c0392b;border:none;border-radius:8px;width:30px;height:30px;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center}
-
-/* PEKERJA */
+.rec-del{position:absolute;top:10px;right:10px;background:#fdecea;color:#c0392b;border:none;border-radius:8px;width:30px;height:30px;font-size:15px;cursor:pointer}
 .pek{background:#fff;border-radius:12px;padding:13px 14px;margin-bottom:8px;box-shadow:0 2px 10px rgba(0,80,0,.08);display:flex;align-items:center;gap:12px}
 .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#5aad2a,#1e4d0a);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:900;flex-shrink:0}
-
-/* EMPTY & LOADING */
+.ucard{background:#fff;border-radius:14px;padding:14px;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,80,0,.1);border-left:4px solid #f9ca24}
+.back-btn{background:#f0f0f0;color:#333;border:none;border-radius:10px;padding:9px 16px;font-size:13px;font-weight:800;cursor:pointer;margin-bottom:12px}
+.btn-lihat{background:#1e4d0a;color:#fff;border:none;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:800;cursor:pointer;margin-top:8px}
 .empty{text-align:center;padding:40px 20px;color:#bbb}
 .empty .ico{font-size:48px;margin-bottom:10px}
 .empty p{font-size:14px;font-weight:600}
 .loading{text-align:center;padding:30px;color:#5aad2a;font-weight:700;font-size:14px}
-.loading::before{content:'⏳ '}
-
-/* SYNC INDICATOR */
-.sync-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.15);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;margin-top:6px}
-.sync-dot{width:7px;height:7px;border-radius:50%;background:#5aad2a;animation:pulse 1.5s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-
-/* TOAST */
 .toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-90px);background:#1e4d0a;color:#fff;padding:10px 22px;border-radius:22px;font-size:13px;font-weight:700;z-index:999;transition:transform .3s;white-space:nowrap;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0)}
 </style>
 </head>
 <body>
 
-<!-- LOGIN SCREEN -->
 <div id="login-screen" class="login-screen">
   <div class="login-logo">🌾</div>
   <div class="login-title">Tani Catat</div>
-  <div class="login-sub">Aplikasi Daftar Hadir Tenaga Kerja Pertanian</div>
+  <div class="login-sub">Daftar Hadir Tenaga Kerja Pertanian</div>
   <div class="login-card">
     <h2>Selamat Datang!</h2>
-    <p>Login dengan akun Google Anda untuk mulai mencatat kegiatan pertanian</p>
+    <p>Login dengan akun Google untuk mulai mencatat</p>
     <button class="btn-google" onclick="loginGoogle()">
-      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"/>
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"/>
       Masuk dengan Google
     </button>
-    <div class="login-note">Data Anda tersimpan aman di cloud Firebase 🔒</div>
+    <div class="login-note">Data tersimpan aman di cloud Firebase 🔒</div>
   </div>
 </div>
 
-<!-- MAIN APP -->
 <div id="main-app" style="display:none">
   <div class="hdr">
     <div class="hdr-left">
-      <h1>🌾 Tani Catat</h1>
+      <h1>🌾 Tani Catat <span id="admin-badge" class="admin-badge" style="display:none">ADMIN</span></h1>
       <div class="sync-badge"><div class="sync-dot"></div> Tersinkron</div>
     </div>
     <div class="user-info">
@@ -142,61 +114,41 @@ body{font-family:sans-serif;background:#eef4e8;min-height:100vh;padding-bottom:7
       </div>
     </div>
   </div>
-
   <div class="tabs">
     <button class="tab on" onclick="goTab('absen',this)">✏️ Absen</button>
     <button class="tab" onclick="goTab('rekap',this)">📋 Rekap</button>
     <button class="tab" onclick="goTab('pekerja',this)">👥 Pekerja</button>
+    <button class="tab" id="tab-admin" style="display:none" onclick="goTab('admin',this)">👑 Admin</button>
   </div>
 
-  <!-- ABSEN -->
   <div class="pg on" id="pg-absen">
     <div class="card" style="margin-top:14px">
       <div class="ctitle">📅 Tanggal & Pekerja</div>
       <div class="row2">
-        <div class="fg">
-          <label>Tanggal</label>
-          <input type="date" id="inp-tgl" onchange="autoHari()"/>
-        </div>
-        <div class="fg">
-          <label>Hari</label>
-          <input type="text" id="inp-hari" readonly placeholder="Otomatis"/>
-        </div>
-        <div class="fg full">
-          <label>Nama Pekerja</label>
-          <select id="inp-nama">
-            <option value="">– Pilih Pekerja –</option>
-          </select>
+        <div class="fg"><label>Tanggal</label><input type="date" id="inp-tgl" onchange="autoHari()"/></div>
+        <div class="fg"><label>Hari</label><input type="text" id="inp-hari" readonly/></div>
+        <div class="fg full"><label>Nama Pekerja</label>
+          <select id="inp-nama"><option value="">– Pilih Pekerja –</option></select>
         </div>
       </div>
     </div>
     <div class="card">
       <div class="ctitle">🕐 Jam Masuk & Keluar</div>
       <div class="row2">
-        <div class="fg">
-          <label>IN (Masuk)</label>
-          <div class="trow">
-            <input type="time" id="inp-in"/>
-            <button class="nbtn" onclick="setNow('inp-in')">Skrg</button>
-          </div>
+        <div class="fg"><label>IN (Masuk)</label>
+          <div class="trow"><input type="time" id="inp-in"/><button class="nbtn" onclick="setNow('inp-in')">Skrg</button></div>
         </div>
-        <div class="fg">
-          <label>OUT (Keluar)</label>
-          <div class="trow">
-            <input type="time" id="inp-out"/>
-            <button class="nbtn" onclick="setNow('inp-out')">Skrg</button>
-          </div>
+        <div class="fg"><label>OUT (Keluar)</label>
+          <div class="trow"><input type="time" id="inp-out"/><button class="nbtn" onclick="setNow('inp-out')">Skrg</button></div>
         </div>
-        <div class="fg full">
-          <label>Keterangan / Kegiatan</label>
-          <textarea id="inp-ket" placeholder="Contoh: Spray, Bersih rumput, Pupuk NPK..."></textarea>
+        <div class="fg full"><label>Keterangan</label>
+          <textarea id="inp-ket" placeholder="Contoh: Spray, Bersih rumput, Pupuk..."></textarea>
         </div>
       </div>
       <button class="btn-save" onclick="simpan()">💾 Simpan Absen</button>
     </div>
   </div>
 
-  <!-- REKAP -->
   <div class="pg" id="pg-rekap">
     <div style="height:14px"></div>
     <div class="sumgrid">
@@ -204,42 +156,60 @@ body{font-family:sans-serif;background:#eef4e8;min-height:100vh;padding-bottom:7
       <div class="sumcard"><div class="sumval" id="s-jam" style="color:#7d5a2f">0j</div><div class="sumlbl">Total Jam</div></div>
     </div>
     <div class="chips" id="chips"></div>
-    <div id="list-rekap"><div class="loading">Memuat data...</div></div>
+    <div id="list-rekap"><div class="loading">Memuat...</div></div>
     <div class="card" style="margin-top:4px">
-      <div class="ctitle">📤 Export Data</div>
+      <div class="ctitle">📤 Export Data Saya</div>
       <button class="btn-export" onclick="exportCSV()">⬇️ Download CSV</button>
       <button class="btn-export" onclick="exportTeks()" style="background:linear-gradient(135deg,#dfe6e9,#b2bec3);color:#2d3436">📄 Salin Teks</button>
     </div>
   </div>
 
-  <!-- PEKERJA -->
   <div class="pg" id="pg-pekerja">
     <div class="card" style="margin-top:14px">
       <div class="ctitle">➕ Tambah Pekerja</div>
-      <div class="fg">
-        <label>Nama Pekerja</label>
-        <input type="text" id="pek-nama" placeholder="Masukkan nama lengkap..."/>
-      </div>
-      <div class="fg">
-        <label>Jabatan / Posisi</label>
-        <input type="text" id="pek-posisi" placeholder="Contoh: Buruh Harian, Mandor..."/>
-      </div>
-      <button class="btn-save" onclick="tambahPekerja()">➕ Tambah Pekerja</button>
+      <div class="fg"><label>Nama</label><input type="text" id="pek-nama" placeholder="Nama lengkap..."/></div>
+      <div class="fg"><label>Jabatan</label><input type="text" id="pek-posisi" placeholder="Buruh Harian, Mandor..."/></div>
+      <button class="btn-save" onclick="tambahPekerja()">➕ Tambah</button>
     </div>
-    <div id="list-pekerja"><div class="loading">Memuat data...</div></div>
+    <div id="list-pekerja"><div class="loading">Memuat...</div></div>
+  </div>
+
+  <div class="pg" id="pg-admin">
+    <div style="height:14px"></div>
+    <div id="admin-main">
+      <div class="card" style="background:linear-gradient(135deg,#1e4d0a,#3a7d1a);color:#fff">
+        <div style="font-size:14px;font-weight:900">👑 Admin Dashboard</div>
+        <div style="font-size:12px;opacity:.8;margin-top:4px">Lihat data absen semua pengguna</div>
+      </div>
+      <div class="sumgrid3">
+        <div class="sumcard"><div class="sumval" id="a-users" style="color:#1e4d0a">0</div><div class="sumlbl">Pengguna</div></div>
+        <div class="sumcard"><div class="sumval" id="a-total" style="color:#7d5a2f">0</div><div class="sumlbl">Total Absen</div></div>
+        <div class="sumcard"><div class="sumval" id="a-jam" style="color:#2980b9">0j</div><div class="sumlbl">Total Jam</div></div>
+      </div>
+      <div class="card">
+        <div class="ctitle">📤 Export Semua Data</div>
+        <button class="btn-export" onclick="exportAllCSV()">⬇️ Download Semua CSV</button>
+      </div>
+      <div style="font-size:11px;font-weight:900;color:#1e6b0a;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">👥 Semua Pengguna</div>
+      <div id="admin-users"><div class="loading">Memuat data...</div></div>
+    </div>
+    <div id="admin-detail" style="display:none">
+      <button class="back-btn" onclick="backAdmin()">← Kembali</button>
+      <div id="admin-detail-body"></div>
+    </div>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
-<!-- FIREBASE -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
   from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, query, orderBy }
+import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, query, orderBy, getDocs, setDoc }
   from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
+const ADMIN_EMAIL = "padelilubis@gmail.com";
 const firebaseConfig = {
   apiKey: "AIzaSyARrJJyktK-hjA9avswoZn4Lz4V7NUrtPo",
   authDomain: "tani-catat.firebaseapp.com",
@@ -254,290 +224,181 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
-let currentUser = null;
-let filterBln = null;
-let absenData = [];
-let pekerjaData = [];
-let unsubAbsen = null;
-let unsubPekerja = null;
+let currentUser=null, isAdmin=false, filterBln=null;
+let absenData=[], pekerjaData=[], allUsers=[];
+let unsubAbsen=null, unsubPekerja=null;
 
-// ── AUTH ────────────────────────────────────────────────────────
-window.loginGoogle = async function() {
-  try {
-    await signInWithPopup(auth, provider);
-  } catch(e) {
-    toast('❌ Login gagal: ' + e.message);
-  }
-};
-
-window.logout = async function() {
-  if(!confirm('Yakin ingin keluar?')) return;
+window.loginGoogle = async()=>{ try{ await signInWithPopup(auth,provider); }catch(e){ toast('❌ '+e.message); } };
+window.logout = async()=>{
+  if(!confirm('Yakin keluar?')) return;
   if(unsubAbsen) unsubAbsen();
   if(unsubPekerja) unsubPekerja();
   await signOut(auth);
 };
 
-onAuthStateChanged(auth, (user) => {
-  if(user) {
-    currentUser = user;
-    document.getElementById('login-screen').style.display = 'none';
-    document.getElementById('main-app').style.display = 'block';
-    document.getElementById('user-name').textContent = user.displayName?.split(' ')[0] || 'User';
-    document.getElementById('user-avatar').src = user.photoURL || '';
-    initData();
-    setTanggalHariIni();
+onAuthStateChanged(auth, async(user)=>{
+  if(user){
+    currentUser=user; isAdmin=(user.email===ADMIN_EMAIL);
+    document.getElementById('login-screen').style.display='none';
+    document.getElementById('main-app').style.display='block';
+    document.getElementById('user-name').textContent=user.displayName?.split(' ')[0]||'User';
+    document.getElementById('user-avatar').src=user.photoURL||'';
+    if(isAdmin){ document.getElementById('admin-badge').style.display='inline-block'; document.getElementById('tab-admin').style.display='flex'; }
+    await setDoc(doc(db,'users',user.uid),{nama:user.displayName,email:user.email,foto:user.photoURL,lastLogin:Date.now()},{merge:true});
+    initData(); setToday();
   } else {
-    currentUser = null;
-    document.getElementById('login-screen').style.display = 'flex';
-    document.getElementById('main-app').style.display = 'none';
+    currentUser=null; isAdmin=false;
+    document.getElementById('login-screen').style.display='flex';
+    document.getElementById('main-app').style.display='none';
   }
 });
 
-function initData() {
-  const uid = currentUser.uid;
-
-  // Listen pekerja
-  const qPekerja = query(collection(db, 'users', uid, 'pekerja'), orderBy('nama'));
-  unsubPekerja = onSnapshot(qPekerja, (snap) => {
-    pekerjaData = snap.docs.map(d => ({id: d.id, ...d.data()}));
-    renderPekerja();
-    renderSelect();
+function initData(){
+  const uid=currentUser.uid;
+  unsubPekerja=onSnapshot(query(collection(db,'users',uid,'pekerja'),orderBy('nama')),(snap)=>{
+    pekerjaData=snap.docs.map(d=>({id:d.id,...d.data()}));
+    renderPekerja(); renderSelect();
   });
-
-  // Listen absen
-  const qAbsen = query(collection(db, 'users', uid, 'absen'), orderBy('tanggal', 'desc'));
-  unsubAbsen = onSnapshot(qAbsen, (snap) => {
-    absenData = snap.docs.map(d => ({id: d.id, ...d.data()}));
+  unsubAbsen=onSnapshot(query(collection(db,'users',uid,'absen'),orderBy('tanggal','desc')),(snap)=>{
+    absenData=snap.docs.map(d=>({id:d.id,...d.data()}));
     renderRekap();
   });
 }
 
-// ── HELPERS ─────────────────────────────────────────────────────
-function setTanggalHariIni() {
-  const today = new Date();
-  const y = today.getFullYear();
-  const m = String(today.getMonth()+1).padStart(2,'0');
-  const d = String(today.getDate()).padStart(2,'0');
-  document.getElementById('inp-tgl').value = y+'-'+m+'-'+d;
+function setToday(){
+  const n=new Date();
+  document.getElementById('inp-tgl').value=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');
   autoHari();
 }
 
-window.autoHari = function() {
-  const v = document.getElementById('inp-tgl').value;
-  if(!v) return;
-  const hari = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
-  document.getElementById('inp-hari').value = hari[new Date(v+'T00:00:00').getDay()];
-};
+window.autoHari=()=>{ const v=document.getElementById('inp-tgl').value; if(!v)return; document.getElementById('inp-hari').value=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'][new Date(v+'T00:00:00').getDay()]; };
+window.setNow=(id)=>{ const n=new Date(); document.getElementById(id).value=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0'); };
+const fmtTgl=s=>{ if(!s)return'–'; const p=s.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; };
+const hitungJam=(i,o)=>{ if(!i||!o)return''; const a=i.split(':').map(Number),b=o.split(':').map(Number),m=(b[0]*60+b[1])-(a[0]*60+a[1]); return m>0?Math.floor(m/60)+'j'+(m%60?m%60+'m':''):''; };
+const totalMnt=arr=>{ let t=0; arr.forEach(a=>{ if(a.inV&&a.outV){const i=a.inV.split(':').map(Number),o=a.outV.split(':').map(Number),d=(o[0]*60+o[1])-(i[0]*60+i[1]); if(d>0)t+=d;} }); return t; };
+const jamStr=m=>{ const j=Math.floor(m/60),s=m%60; return j+(s?'.'+s:'')+'j'; };
 
-window.setNow = function(id) {
-  const n = new Date();
-  document.getElementById(id).value = String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');
-};
-
-function fmtTgl(s) {
-  if(!s) return '–';
-  const p = s.split('-'); return p[2]+'/'+p[1]+'/'+p[0];
-}
-
-function hitungJam(i, o) {
-  if(!i||!o) return '';
-  const a=i.split(':').map(Number), b=o.split(':').map(Number);
-  const mnt=(b[0]*60+b[1])-(a[0]*60+a[1]);
-  if(mnt<=0) return '';
-  return Math.floor(mnt/60)+'j'+(mnt%60?mnt%60+'m':'');
-}
-
-// ── TABS ────────────────────────────────────────────────────────
-window.goTab = function(id, btn) {
+window.goTab=(id,btn)=>{
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
-  document.getElementById('pg-'+id).classList.add('on');
-  btn.classList.add('on');
+  document.getElementById('pg-'+id).classList.add('on'); btn.classList.add('on');
+  if(id==='admin') loadAdmin();
 };
 
-// ── PEKERJA ─────────────────────────────────────────────────────
-window.tambahPekerja = async function() {
-  const nama = document.getElementById('pek-nama').value.trim();
-  const posisi = document.getElementById('pek-posisi').value.trim();
-  if(!nama){toast('⚠️ Masukkan nama pekerja!');return;}
-  if(pekerjaData.find(p=>p.nama.toLowerCase()===nama.toLowerCase())){
-    toast('⚠️ Nama sudah ada!');return;
-  }
-  try {
-    await addDoc(collection(db,'users',currentUser.uid,'pekerja'), {nama, posisi, createdAt: Date.now()});
-    document.getElementById('pek-nama').value='';
-    document.getElementById('pek-posisi').value='';
-    toast('✅ Pekerja ditambahkan!');
-  } catch(e) { toast('❌ Gagal: '+e.message); }
+window.tambahPekerja=async()=>{
+  const nama=document.getElementById('pek-nama').value.trim();
+  const posisi=document.getElementById('pek-posisi').value.trim();
+  if(!nama){toast('⚠️ Masukkan nama!');return;}
+  if(pekerjaData.find(p=>p.nama.toLowerCase()===nama.toLowerCase())){toast('⚠️ Nama sudah ada!');return;}
+  try{ await addDoc(collection(db,'users',currentUser.uid,'pekerja'),{nama,posisi,createdAt:Date.now()}); document.getElementById('pek-nama').value=''; document.getElementById('pek-posisi').value=''; toast('✅ Ditambahkan!'); }catch(e){toast('❌ '+e.message);}
 };
+window.hapusPekerja=async(id)=>{ if(!confirm('Hapus?'))return; try{await deleteDoc(doc(db,'users',currentUser.uid,'pekerja',id));toast('🗑️ Dihapus');}catch(e){toast('❌ '+e.message);} };
 
-window.hapusPekerja = async function(id) {
-  if(!confirm('Hapus pekerja ini?')) return;
-  try {
-    await deleteDoc(doc(db,'users',currentUser.uid,'pekerja',id));
-    toast('🗑️ Pekerja dihapus');
-  } catch(e) { toast('❌ Gagal: '+e.message); }
-};
-
-function renderPekerja() {
-  const el = document.getElementById('list-pekerja');
-  if(!pekerjaData.length){
-    el.innerHTML='<div class="empty"><div class="ico">👥</div><p>Belum ada pekerja terdaftar</p></div>';
-    return;
-  }
-  el.innerHTML = pekerjaData.map(p=>`
-    <div class="pek">
-      <div class="avatar">${p.nama[0].toUpperCase()}</div>
-      <div style="flex:1">
-        <div style="font-weight:800;font-size:15px">${p.nama}</div>
-        <div style="font-size:12px;color:#aaa;font-weight:600">${p.posisi||'Pekerja Harian'}</div>
-      </div>
-      <button class="btn-del" onclick="hapusPekerja('${p.id}')">🗑️ Hapus</button>
-    </div>
-  `).join('');
+function renderPekerja(){
+  const el=document.getElementById('list-pekerja');
+  if(!pekerjaData.length){el.innerHTML='<div class="empty"><div class="ico">👥</div><p>Belum ada pekerja</p></div>';return;}
+  el.innerHTML=pekerjaData.map(p=>`<div class="pek"><div class="avatar">${p.nama[0].toUpperCase()}</div><div style="flex:1"><div style="font-weight:800">${p.nama}</div><div style="font-size:12px;color:#aaa">${p.posisi||'Pekerja Harian'}</div></div><button class="btn-del" onclick="hapusPekerja('${p.id}')">🗑️</button></div>`).join('');
+}
+function renderSelect(){
+  const sel=document.getElementById('inp-nama'); const cur=sel.value;
+  sel.innerHTML='<option value="">– Pilih Pekerja –</option>'+pekerjaData.map(p=>`<option value="${p.nama}">${p.nama}</option>`).join('');
+  if(cur) sel.value=cur;
 }
 
-function renderSelect() {
-  const sel = document.getElementById('inp-nama');
-  const cur = sel.value;
-  sel.innerHTML = '<option value="">– Pilih Pekerja –</option>'+
-    pekerjaData.map(p=>`<option value="${p.nama}">${p.nama}</option>`).join('');
-  if(cur) sel.value = cur;
-}
-
-// ── SIMPAN ABSEN ────────────────────────────────────────────────
-window.simpan = async function() {
-  const tgl  = document.getElementById('inp-tgl').value;
-  const hari = document.getElementById('inp-hari').value;
-  const nama = document.getElementById('inp-nama').value;
-  const inV  = document.getElementById('inp-in').value;
-  const outV = document.getElementById('inp-out').value;
-  const ket  = document.getElementById('inp-ket').value.trim();
-  if(!tgl){toast('⚠️ Pilih tanggal!');return;}
-  if(!nama){toast('⚠️ Pilih nama pekerja!');return;}
-  if(!inV&&!outV){toast('⚠️ Isi jam masuk atau keluar!');return;}
-  try {
-    await addDoc(collection(db,'users',currentUser.uid,'absen'), {
-      tanggal:tgl, hari, nama, inV, outV,
-      ttd: hitungJam(inV,outV), ket,
-      createdAt: Date.now()
-    });
-    document.getElementById('inp-in').value='';
-    document.getElementById('inp-out').value='';
-    document.getElementById('inp-ket').value='';
-    toast('✅ Absen disimpan ke cloud!');
-  } catch(e) { toast('❌ Gagal simpan: '+e.message); }
+window.simpan=async()=>{
+  const tgl=document.getElementById('inp-tgl').value,hari=document.getElementById('inp-hari').value,nama=document.getElementById('inp-nama').value,inV=document.getElementById('inp-in').value,outV=document.getElementById('inp-out').value,ket=document.getElementById('inp-ket').value.trim();
+  if(!tgl){toast('⚠️ Pilih tanggal!');return;} if(!nama){toast('⚠️ Pilih pekerja!');return;} if(!inV&&!outV){toast('⚠️ Isi jam!');return;}
+  try{ await addDoc(collection(db,'users',currentUser.uid,'absen'),{tanggal:tgl,hari,nama,inV,outV,ttd:hitungJam(inV,outV),ket,createdAt:Date.now()}); document.getElementById('inp-in').value=''; document.getElementById('inp-out').value=''; document.getElementById('inp-ket').value=''; toast('✅ Absen disimpan ke cloud!'); }catch(e){toast('❌ '+e.message);}
 };
 
-// ── REKAP ────────────────────────────────────────────────────────
-function renderRekap() {
-  const blns = [...new Set(absenData.map(a=>a.tanggal.slice(0,7)))].sort().reverse();
-  const chipsEl = document.getElementById('chips');
-  chipsEl.innerHTML = `<div class="chip${filterBln===null?' on':''}" onclick="setFilter(null,this)">Semua</div>`+
-    blns.map(b=>{
-      const p=b.split('-');
-      const bl=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
-      return `<div class="chip${filterBln===b?' on':''}" onclick="setFilter('${b}',this)">${bl[parseInt(p[1])-1]} ${p[0]}</div>`;
-    }).join('');
-
-  const list = filterBln ? absenData.filter(a=>a.tanggal.startsWith(filterBln)) : absenData;
-
-  let totalMnt=0;
-  list.forEach(a=>{
-    if(a.inV&&a.outV){
-      const i=a.inV.split(':').map(Number), o=a.outV.split(':').map(Number);
-      const d=(o[0]*60+o[1])-(i[0]*60+i[1]);
-      if(d>0) totalMnt+=d;
-    }
-  });
+function renderRekap(){
+  const blns=[...new Set(absenData.map(a=>a.tanggal.slice(0,7)))].sort().reverse();
+  document.getElementById('chips').innerHTML=`<div class="chip${filterBln===null?' on':''}" onclick="setFilter(null,this)">Semua</div>`+blns.map(b=>{ const p=b.split('-'),bl=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des']; return `<div class="chip${filterBln===b?' on':''}" onclick="setFilter('${b}',this)">${bl[parseInt(p[1])-1]} ${p[0]}</div>`; }).join('');
+  const list=filterBln?absenData.filter(a=>a.tanggal.startsWith(filterBln)):absenData;
+  const m=totalMnt(list);
   document.getElementById('s-catatan').textContent=list.length;
-  const jj=Math.floor(totalMnt/60), mm=totalMnt%60;
-  document.getElementById('s-jam').textContent=jj+(mm?'.'+mm:'')+'j';
-
+  document.getElementById('s-jam').textContent=jamStr(m);
   const el=document.getElementById('list-rekap');
-  if(!list.length){
-    el.innerHTML='<div class="empty"><div class="ico">📋</div><p>Belum ada data absen</p></div>';
-    return;
-  }
-  el.innerHTML=list.map(a=>`
-    <div class="rec">
-      <div class="rec-head">
-        <div>
-          <div class="rec-date">${fmtTgl(a.tanggal)}</div>
-          <div class="rec-day">${a.hari}</div>
-          <div class="rec-nama">👤 ${a.nama}</div>
+  if(!list.length){el.innerHTML='<div class="empty"><div class="ico">📋</div><p>Belum ada data</p></div>';return;}
+  el.innerHTML=list.map(a=>`<div class="rec"><div class="rec-head"><div><div class="rec-date">${fmtTgl(a.tanggal)}</div><div class="rec-day">${a.hari}</div><div class="rec-nama">👤 ${a.nama}</div></div><span class="badge">${a.ttd||'Hadir'}</span></div><div class="times"><div class="tc"><div class="dot in"></div>IN: ${a.inV||'–'}</div><div class="tc"><div class="dot out"></div>OUT: ${a.outV||'–'}</div></div>${a.ket?`<div class="rec-ket">📝 ${a.ket}</div>`:''}<button class="rec-del" onclick="hapusAbsen('${a.id}')">🗑</button></div>`).join('');
+}
+window.setFilter=(val,el)=>{ filterBln=val; document.querySelectorAll('.chip').forEach(c=>c.classList.remove('on')); el.classList.add('on'); renderRekap(); };
+window.hapusAbsen=async(id)=>{ if(!confirm('Hapus?'))return; try{await deleteDoc(doc(db,'users',currentUser.uid,'absen',id));toast('🗑️ Dihapus');}catch(e){toast('❌ '+e.message);} };
+
+// ── ADMIN ─────────────────────────────────────────────────────
+async function loadAdmin(){
+  if(!isAdmin) return;
+  document.getElementById('admin-users').innerHTML='<div class="loading">Memuat data semua pengguna...</div>';
+  try{
+    const snap=await getDocs(collection(db,'users'));
+    allUsers=[]; let totAbsen=0, totMnt=0;
+    for(const d of snap.docs){
+      const u=d.data();
+      const aSnap=await getDocs(query(collection(db,'users',d.id,'absen'),orderBy('tanggal','desc')));
+      const absen=aSnap.docs.map(x=>({id:x.id,...x.data()}));
+      const m=totalMnt(absen);
+      totAbsen+=absen.length; totMnt+=m;
+      allUsers.push({uid:d.id,...u,absen,mnt:m});
+    }
+    document.getElementById('a-users').textContent=allUsers.length;
+    document.getElementById('a-total').textContent=totAbsen;
+    document.getElementById('a-jam').textContent=jamStr(totMnt);
+    const el=document.getElementById('admin-users');
+    if(!allUsers.length){el.innerHTML='<div class="empty"><div class="ico">👥</div><p>Belum ada pengguna</p></div>';return;}
+    el.innerHTML=allUsers.map((u,i)=>`
+      <div class="ucard">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <img src="${u.foto||''}" style="width:36px;height:36px;border-radius:50%;object-fit:cover;background:#eee"/>
+          <div><div style="font-weight:900;font-size:15px">${u.nama||'–'} ${u.email===ADMIN_EMAIL?'👑':''}</div>
+          <div style="font-size:12px;color:#aaa">${u.email||'–'}</div></div>
         </div>
-        <span class="badge">${a.ttd||'Hadir'}</span>
-      </div>
-      <div class="times">
-        <div class="tc"><div class="dot in"></div>IN: ${a.inV||'–'}</div>
-        <div class="tc"><div class="dot out"></div>OUT: ${a.outV||'–'}</div>
-      </div>
-      ${a.ket?`<div class="rec-ket">📝 ${a.ket}</div>`:''}
-      <button class="rec-del" onclick="hapusAbsen('${a.id}')">🗑</button>
-    </div>
-  `).join('');
+        <div style="display:flex;gap:10px">
+          <div class="sumcard" style="flex:1;padding:8px"><div style="font-size:20px;font-weight:900;color:#1e4d0a">${u.absen.length}</div><div style="font-size:10px;color:#999;font-weight:700">ABSEN</div></div>
+          <div class="sumcard" style="flex:1;padding:8px"><div style="font-size:20px;font-weight:900;color:#7d5a2f">${jamStr(u.mnt)}</div><div style="font-size:10px;color:#999;font-weight:700">JAM</div></div>
+        </div>
+        <button class="btn-lihat" onclick="detailUser(${i})">📋 Lihat Detail Absen</button>
+      </div>`).join('');
+  }catch(e){ document.getElementById('admin-users').innerHTML='<div class="empty"><div class="ico">❌</div><p>'+e.message+'</p></div>'; }
 }
 
-window.setFilter = function(val, el) {
-  filterBln=val;
-  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('on'));
-  el.classList.add('on');
-  renderRekap();
+window.detailUser=(idx)=>{
+  const u=allUsers[idx];
+  document.getElementById('admin-main').style.display='none';
+  document.getElementById('admin-detail').style.display='block';
+  let html=`<div class="card" style="background:linear-gradient(135deg,#1e4d0a,#3a7d1a);color:#fff;margin-bottom:12px">
+    <div style="font-size:16px;font-weight:900">${u.nama||'–'}</div>
+    <div style="font-size:12px;opacity:.8">${u.email}</div>
+    <div style="margin-top:6px;font-size:13px">📋 ${u.absen.length} catatan &nbsp;|&nbsp; ⏱️ ${jamStr(u.mnt)}</div>
+  </div>`;
+  if(!u.absen.length){ html+='<div class="empty"><div class="ico">📋</div><p>Belum ada data absen</p></div>'; }
+  else { html+=u.absen.map(a=>`<div class="rec"><div class="rec-head"><div><div class="rec-date">${fmtTgl(a.tanggal)}</div><div class="rec-day">${a.hari}</div><div class="rec-nama">👤 ${a.nama}</div></div><span class="badge">${a.ttd||'Hadir'}</span></div><div class="times"><div class="tc"><div class="dot in"></div>IN: ${a.inV||'–'}</div><div class="tc"><div class="dot out"></div>OUT: ${a.outV||'–'}</div></div>${a.ket?`<div class="rec-ket">📝 ${a.ket}</div>`:''}</div>`).join(''); }
+  document.getElementById('admin-detail-body').innerHTML=html;
 };
+window.backAdmin=()=>{ document.getElementById('admin-main').style.display='block'; document.getElementById('admin-detail').style.display='none'; };
 
-window.hapusAbsen = async function(id) {
-  if(!confirm('Hapus catatan ini?')) return;
-  try {
-    await deleteDoc(doc(db,'users',currentUser.uid,'absen',id));
-    toast('🗑️ Data dihapus');
-  } catch(e) { toast('❌ Gagal: '+e.message); }
+window.exportAllCSV=()=>{
+  if(!allUsers.length){toast('⚠️ Belum ada data');return;}
+  let csv='Nama User,Email,Tanggal,Hari,Pekerja,IN,OUT,Total Jam,Keterangan\n';
+  allUsers.forEach(u=>{ [...u.absen].sort((a,b)=>a.tanggal.localeCompare(b.tanggal)).forEach(a=>{ csv+=`"${u.nama}","${u.email}","${fmtTgl(a.tanggal)}","${a.hari}","${a.nama}","${a.inV}","${a.outV}","${a.ttd}","${a.ket}"\n`; }); });
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),link=document.createElement('a');
+  link.href=url; link.download='semua-absen.csv'; link.click(); toast('✅ Semua data diunduh!');
 };
-
-// ── EXPORT ────────────────────────────────────────────────────────
-window.exportCSV = function() {
+window.exportCSV=()=>{
   if(!absenData.length){toast('⚠️ Belum ada data');return;}
   let csv='Tanggal,Hari,Nama,IN,OUT,Total Jam,Keterangan\n';
-  [...absenData].sort((a,b)=>a.tanggal.localeCompare(b.tanggal)).forEach(a=>{
-    csv+=`"${fmtTgl(a.tanggal)}","${a.hari}","${a.nama}","${a.inV}","${a.outV}","${a.ttd}","${a.ket}"\n`;
-  });
-  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
-  const url=URL.createObjectURL(blob);
-  const link=document.createElement('a');
-  link.href=url; link.download='absen-pertanian.csv'; link.click();
-  toast('✅ CSV diunduh!');
+  [...absenData].sort((a,b)=>a.tanggal.localeCompare(b.tanggal)).forEach(a=>{ csv+=`"${fmtTgl(a.tanggal)}","${a.hari}","${a.nama}","${a.inV}","${a.outV}","${a.ttd}","${a.ket}"\n`; });
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),link=document.createElement('a');
+  link.href=url; link.download='absen-saya.csv'; link.click(); toast('✅ CSV diunduh!');
 };
-
-window.exportTeks = function() {
+window.exportTeks=()=>{
   if(!absenData.length){toast('⚠️ Belum ada data');return;}
-  let teks='DAFTAR HADIR TENAGA KERJA PERTANIAN\n'+'='.repeat(38)+'\n\n';
-  [...absenData].sort((a,b)=>a.tanggal.localeCompare(b.tanggal)).forEach(a=>{
-    teks+=`${fmtTgl(a.tanggal)} (${a.hari}) | ${a.nama}\n`;
-    teks+=`  IN: ${a.inV||'-'}  OUT: ${a.outV||'-'}  Total: ${a.ttd||'-'}\n`;
-    if(a.ket) teks+=`  Ket: ${a.ket}\n`;
-    teks+='\n';
-  });
-  if(navigator.clipboard){
-    navigator.clipboard.writeText(teks).then(()=>toast('✅ Teks disalin!')).catch(()=>fallbackCopy(teks));
-  } else { fallbackCopy(teks); }
+  let t='DAFTAR HADIR PERTANIAN\n'+'='.repeat(30)+'\n\n';
+  [...absenData].sort((a,b)=>a.tanggal.localeCompare(b.tanggal)).forEach(a=>{ t+=`${fmtTgl(a.tanggal)} (${a.hari}) | ${a.nama}\n  IN: ${a.inV||'-'}  OUT: ${a.outV||'-'}  Total: ${a.ttd||'-'}\n${a.ket?'  Ket: '+a.ket+'\n':''}\n`; });
+  if(navigator.clipboard){ navigator.clipboard.writeText(t).then(()=>toast('✅ Disalin!')).catch(()=>{ const x=document.createElement('textarea'); x.value=t; document.body.appendChild(x); x.select(); document.execCommand('copy'); document.body.removeChild(x); toast('✅ Disalin!'); }); }
 };
 
-function fallbackCopy(teks) {
-  const ta=document.createElement('textarea');
-  ta.value=teks; document.body.appendChild(ta);
-  ta.select(); document.execCommand('copy');
-  document.body.removeChild(ta);
-  toast('✅ Teks disalin!');
-}
-
-// ── TOAST ─────────────────────────────────────────────────────────
 let toastTimer;
-window.toast = function(msg) {
-  const el=document.getElementById('toast');
-  el.textContent=msg; el.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>el.classList.remove('show'),2800);
-};
+window.toast=(msg)=>{ const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove('show'),2800); };
 </script>
 </body>
 </html>
